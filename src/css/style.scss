@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+$bodyBgColor: hsl(30, 38%, 92%);
+$mainBgColor: #fff;
+$btnColor: hsl(158, 36%, 37%);
+$promotionPriceColor: hsl(158, 36%, 37%);
+$fontFamilyTitle: "Fraunces", serif;
+$txtColor: gray;
+
+body {
+    background-color: $bodyBgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+    height: 100dvh;
+
+    main {
+        background-color: $mainBgColor;
+        width: 90%;
+        border-radius: 1rem;
+
+        #perfurmIMG {
+            width: 100%;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0rem 2rem 2rem 2rem;
+            .perfume {
+                font-size: 1.4rem;
+                letter-spacing: 0.5rem;
+                font-weight: 500;
+                color: $txtColor;
+            }
+            #perfume-name {
+                font-size: 3rem;
+                font-family: $fontFamilyTitle;
+                font-weight: 700;
+            }
+
+            #perfume-description {
+                font-size: 1.4rem;
+                color: $txtColor;
+            }
+
+            .prices {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 70%;
+            }
+
+            #promotion-price {
+                font-size: 3rem;
+                font-family: $fontFamilyTitle;
+                color: $promotionPriceColor;
+            }
+
+            #price {
+                font-size: 1.4rem;
+                text-decoration: line-through;
+                font-weight: 700;
+                color: $txtColor;
+            }
+
+            #btn-addItem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                background-color: $btnColor;
+                color: $mainBgColor;
+
+                width: 100%;
+                padding: 1rem 0rem;
+
+                font-size: 1.4rem;
+
+                border: none;
+                border-radius: 1rem;
+                cursor: pointer;
+
+                #btn-cartIcon {
+                    width: 2rem;
+                }
+            }
+
+            #btn-addItem:hover {
+                background-color: green;
+                transition: 1s;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        main {
+            width: 50%;
+            display: flex;
+
+            #perfurmIMG {
+                height: 100%;
+                max-width: 50%;
+                border-radius: 1rem 0rem 0rem 1rem;
+            }
+            .container {
+                padding: 1rem;
+                gap: 1.5rem;
+                width: 50%;
+                .perfume {
+                    font-size: 1.4rem;
+                }
+                #perfume-name {
+                    font-size: 3rem;
+                }
+                #perfume-description {
+                    font-size: 1.4rem;
+                }
+                #promotion-price {
+                    font-size: 1.4rem;
+                }
+                #price {
+                    font-size: 1.4rem;
+                }
+                #btn-addItem {
+                    font-size: 1.4rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1440px) {
+    body {
+        main {
+            width: 30%;
+            display: flex;
+
+            #perfurmIMG {
+                height: 100%;
+                max-width: 50%;
+                border-radius: 1rem 0rem 0rem 1rem;
+            }
+            .container {
+                padding: 2rem;
+                gap: 3rem;
+                height: 100%;
+                width: 50%;
+                .perfume {
+                    font-size: 1.4rem;
+                }
+                #perfume-name {
+                    font-size: 3rem;
+                }
+                #perfume-description {
+                    font-size: 1.4rem;
+                }
+
+                .prices{
+                    justify-content: left;
+                    gap: 2rem;
+                    width: 100%;
+                }
+                #promotion-price {
+                    font-size: 3rem;
+                }
+                #price {
+                    font-size: 1.4rem;
+                }
+                #btn-addItem {
+                    font-size: 1.4rem;
+                    padding: 1.4rem;
+                }
+            }
+        }
+    }
+}
